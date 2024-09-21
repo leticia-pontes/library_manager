@@ -1,0 +1,27 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Django
+*.log
+*.sqlite3
+db.sqlite3
+/media
+/staticfiles
+
+# Environment variables
+.env
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Environment variables
+.env
+
+# Other
+*.DS_Store
+*.egg-info/
