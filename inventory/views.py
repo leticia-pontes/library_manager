@@ -8,6 +8,9 @@ from django.urls import reverse_lazy
 
 ## Views de Acesso
 
+class IndexView(TemplateView):
+    template_name = 'index.html'
+
 class HomeView(TemplateView):
     template_name = 'home.html'
 
@@ -17,7 +20,10 @@ class RegisterView(CreateView):
     success_url = reverse_lazy('login')
 
 class AcessoLoginView(LoginView):
-    template_name = 'login.html'
+    template_name = 'registration/login.html'
+
+    def get_success_url(self):
+        return reverse_lazy('home')
 
 
 ## Views dos Models
